@@ -169,9 +169,9 @@ export default function Regular(props) {
                 backgroundPosition: 'center',
             }}
         >
-            <Head title="Undian Hadiah Utama" />
+            <Head title="Undian Hadiah Reguler" />
             <div className="flex flex-col items-center mx-auto mb-4">
-                <div className="text-5xl font-bold outlined-text">
+                <div className="text-3xl font-bold text-blue-700 outlined-text text-center">
                     {event.name}
                 </div>
                 <div className="text-2xl outlined-text">Undian Reguler</div>
@@ -207,23 +207,23 @@ export default function Regular(props) {
                         />
                     )}
                 </div>
-                <div className="flex flex-col items-center justify-center bg-gray-50 rounded-lg px-2 py-4">
-                    <div className="my-2 font-bold">Table data pemenang</div>
+                <div className="flex flex-col items-center justify-center bg-gray-50 rounded-lg px-2 py-1">
+                    <div className="my-2 font-bold">Tabel Data Pemenang</div>
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mb-4 ">
                         <thead className="flex flex-col w-full text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr className="flex w-full">
-                                <th scope="col" className="py-3 px-6 w-1/4">
-                                    NP
+                                <th scope="col" className="py-3 px-6 w-1/3">
+                                    Nomor
                                 </th>
-                                <th scope="col" className="py-3 px-6 w-1/4">
+                                <th scope="col" className="py-3 px-6 w-1/3">
                                     Nama
                                 </th>
-                                <th scope="col" className="py-3 px-6 w-1/4">
+                                <th scope="col" className="py-3 px-6 w-1/3">
                                     No Telp
                                 </th>
-                                <th scope="col" className="py-3 px-6 w-1/4">
+                                {/* <th scope="col" className="py-3 px-6 w-1/4">
                                     Hadiah
-                                </th>
+                                </th> */}
                             </tr>
                         </thead>
                         <tbody
@@ -241,15 +241,15 @@ export default function Regular(props) {
                                     >
                                         {winner.employee_code}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    <td className="py-4 px-6 w-1/3 text-center">
                                         {winner.name}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    <td className="py-4 px-6 w-1/3 text-center">
                                         {maskPhone(winner.phone)}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    {/* <td className="py-4 px-6 w-1/3">
                                         {gift.name}
-                                    </td>
+                                    </td> */}
                                 </tr>
                             ))}
                             {pastParticipants.map((winner) => (
@@ -263,15 +263,15 @@ export default function Regular(props) {
                                     >
                                         {winner.employee_code}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    <td className="py-4 px-6 w-1/3 text-center">
                                         {winner.name}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    <td className="py-4 px-6 w-1/3 text-center">
                                         {maskPhone(winner.phone)}
                                     </td>
-                                    <td className="py-4 px-6 w-1/4">
+                                    {/* <td className="py-4 px-6 w-1/4">
                                         {gift.name}
-                                    </td>
+                                    </td> */}
                                 </tr>
                             ))}
                         </tbody>

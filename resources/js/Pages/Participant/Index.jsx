@@ -130,7 +130,7 @@ export default function Participan(props) {
                                                 scope="col"
                                                 className="py-3 px-6"
                                             >
-                                                Unit Kerja
+                                                NIK
                                             </th>
                                             <th
                                                 scope="col"
@@ -169,7 +169,7 @@ export default function Participan(props) {
                                                     {participant.phone}
                                                 </td>
                                                 <td className="py-4 px-6">
-                                                    {participant.unit}
+                                                    {participant.nik}
                                                 </td>
                                                 <td className="py-4 px-6">
                                                     {participant.agency}

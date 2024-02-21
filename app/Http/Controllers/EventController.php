@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Carbon;
+
 use App\Models\Event;
 use Illuminate\Http\Request;
 
@@ -30,9 +32,11 @@ class EventController extends Controller
             'image' => 'nullable|image',
         ]);
 
+        $date = Carbon::createFromFormat('d/m/Y', $request->date)->format('Y-m-d');
+
         $event = Event::make([
             'name' => $request->name,
-            'date' => $request->date,
+            'date' => $date,
         ]);
 
         if ($request->hasFile('image')) {

@@ -8,6 +8,7 @@ class Participant extends Model
         'event_id',
         'employee_code',
         'name',
+        'nik',
         'phone',
         'email',
         'unit',

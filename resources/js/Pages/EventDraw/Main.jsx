@@ -103,7 +103,7 @@ export default function Main(props) {
         >
             <Head title="Undian Hadiah Utama" />
             <div className="flex flex-col items-center mx-auto">
-                <div className="text-5xl outlined-text">{event.name}</div>
+                <div className="text-3xl font-bold text-blue-700 outlined-text text-center">{event.name}</div>
                 <div className="text-2xl outlined-text">Hadiah Utama</div>
             </div>
             <div className="flex flex-col items-center mx-auto my-6">
@@ -114,7 +114,7 @@ export default function Main(props) {
                     >
                         <img
                             src={gift.image_url}
-                            className="mb-1 max-h-32 w-full object-contain"
+                            className="mb-1 max-h-64 w-full object-contain"
                             alt="preview"
                         />
                         <div className="text-2xl font-bold outlined-text">
@@ -139,7 +139,7 @@ export default function Main(props) {
                     <div className="flex flex-row text-2xl gap-2 mt-2 outlined-text">
                         <div>Nama</div>
                         <div> - </div>
-                        <div>Unit Kerja</div>
+                        <div>NIK</div>
                         <div> - </div>
                         <div>No Telp</div>
                     </div>
@@ -147,7 +147,7 @@ export default function Main(props) {
                     <div className="flex flex-row text-2xl gap-2 mt-2 outlined-text">
                         <div>{winner.name}</div>
                         <div> - </div>
-                        <div>{winner.unit}</div>
+                        <div>{maskPhone(winner.nik)}</div>
                         <div> - </div>
                         <div>{maskPhone(winner.phone)}</div>
                     </div>

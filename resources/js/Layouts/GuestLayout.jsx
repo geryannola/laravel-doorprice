@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import ApplicationLogo from '@/Components/Defaults/ApplicationLogo'
 import { Link, usePage } from '@inertiajs/react'
 
-export default function Guest({ children }) {
+export default function Guest({ children,flash }) {
     const {
         props: { app_name, app_logo },
-    } = usePage()
+    } = usePage();
+
 
     return (
         <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
@@ -27,6 +29,7 @@ export default function Guest({ children }) {
             <div className="w-full max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 {children}
             </div>
+            <ToastContainer />
         </div>
     )
 }

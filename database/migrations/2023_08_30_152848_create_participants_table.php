@@ -15,6 +15,7 @@ return new class extends Migration
             $table->ulid('event_id')->nullable();
             $table->string('employee_code')->nullable();
             $table->string('name')->nullable();
+            $table->string('nik')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('unit')->nullable();

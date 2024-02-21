@@ -38,6 +38,8 @@ export default function Login({ status }) {
         post(route('login'))
     }
 
+
+
     return (
         <GuestLayout>
             <Head title="Log in" />
@@ -92,8 +94,11 @@ export default function Login({ status }) {
                     </label>
                 </div>
 
-                <div className="flex items-center justify-end mt-4">
-                    <Button onClick={submit} disabled={processing}>
+                <div className="flex items-center justify-between mt-4">
+                    <Button size="sm" href='/daftar'>
+                                    Tambah
+                    </Button>
+                                <Button onClick={submit} disabled={processing}>
                         {processing ? <Spinner /> : 'Log in'}
                     </Button>
                 </div>
